@@ -267,9 +267,26 @@ activity in an app for the purpose of user's skill analysis and reporting.
 <!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/cl/Zapptitude;name=start --><p>All the methods have been defined as class methods for ease of
 use, but a singleton class is used internally.
 </p>
-<p>Initialization of the class happens at the first call of any method.
+<p>No need to initialized the class, it is initialized at the first call of any
+method.
+</p>
+<p>Call [Zapptitude requestZappId] early in your app, when an appropriate view
+is visible. This opens a dialog on top of the current view that gives the user
+the opportunity to provide, confirm, or change identity.
+</p>
+<p>Then, for each task, call
+</p>
+<p>[Zapptitude logBeginTask:@"myTaskX" in:@"myContestY"]
+</p>
+<p>whenever the task is presented to the user, and when a solution of proposed 
+call the appropriate
+</p>
+<p>[Zapptitude logSolve*Task:@"myTaskX" in:@"myContextY" about:@"3rd grade math" ...]
+</p>
+<p>depending on the nature of the task's answer: binary, integer, float, multiple
+choice, or graded.
 <!-- headerDoc=discussion;uid=//apple_ref/occ/cl/Zapptitude;name=end --><!-- end discussion -->
-<dl><dt><b>Updated:</b></dt><dd>Sunday, May 24, 2015</dd>
+<dl><dt><b>Updated:</b></dt><dd>Sunday, May 31, 2015</dd>
 </dl>
 <hr class="afterClassOrHeaderInfo"><br><a name="HeaderDoc_methods"></a>
 <h2 class="h2tight">Methods</h2>
@@ -627,7 +644,7 @@ setZappId with nil of and empty zid.
 is anonymous.
 
 <!-- end return value --></p><p class="gapBeforeFooter">&nbsp;</p><hr class="afterFooter"><div class="hd_copyright_and_timestamp">
-<p class="hd_timestamp">Last Updated: Sunday, May 24, 2015
+<p class="hd_timestamp">Last Updated: Sunday, May 31, 2015
 </p></div>
 </td></tr></table>
 </body></html>
