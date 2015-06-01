@@ -12,7 +12,7 @@
   No need to initialized the class, it is initialized at the first call of any
   method.
  
-  Call [Zapptitude requestZappId] early in your app, when an appropriate view
+  Call [Zapptitude requestZid] early in your app, when an appropriate view
   is visible. This opens a dialog on top of the current view that gives the user
   the opportunity to provide, confirm, or change identity.
  
@@ -48,28 +48,28 @@
   Zapptitude id used in the log is the last used Zapptitude id on the device,
   or anonymous if no known Zapptitude id is found.
  */
-+(void)requestZappId;
++(void)requestZid;
 
 /*!
   @brief Sets the Zapptitude id.
-  @discussion It can be used instead of the requestZappId method to set the
+  @discussion It can be used instead of the requestZid method to set the
   Zapptitude id, whenever this id is determined in another way.
  
   An anonymous Zapptitude id is effectively a random id used to keep track
-  of the activity of an anonymous user. Calling setZappId with a nil or empty
+  of the activity of an anonymous user. Calling setZid with a nil or empty
   zid is equivalent to setting the Zapptitude id to anonymous. If the
   Zapptitude id is already anonymous, it is kept unchanged by a call to
-  setZappId with nil of and empty zid.
+  setZid with nil of and empty zid.
   @param zid NSString holding the value the Zapptitude id will be set to.
  */
-+(void)setZappId:(NSString*)zid;
++(void)setZid:(NSString*)zid;
 
 /*!
-  @brief Gets the Zapptitude id, or nil if the user is anonymous.
+  @brief Returns the Zapptitude id, or nil if the user is anonymous.
   @return An NSString with the user provided Zapptitude id or nil if the user
   is anonymous.
  */
-+(NSString*)userProvidedZappId;
++(NSString*)userProvidedZid;
 
 /*!
   @brief Logs an event.

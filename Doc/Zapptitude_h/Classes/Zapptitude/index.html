@@ -270,7 +270,7 @@ use, but a singleton class is used internally.
 <p>No need to initialized the class, it is initialized at the first call of any
 method.
 </p>
-<p>Call [Zapptitude requestZappId] early in your app, when an appropriate view
+<p>Call [Zapptitude requestZid] early in your app, when an appropriate view
 is visible. This opens a dialog on top of the current view that gives the user
 the opportunity to provide, confirm, or change identity.
 </p>
@@ -312,15 +312,15 @@ choice, or graded.
 <dt><tt><a href="index.html#//apple_ref/occ/clm/Zapptitude/logSolveMCTask:in:about:expected:actual:among:" target="_top">+logSolveMCTask:in:about:expected:actual:among:</a></tt></dt>
 <dd><p>Marks the resolution of a multiple choice task.
 </dd>
-<dt><tt><a href="index.html#//apple_ref/occ/clm/Zapptitude/requestZappId" target="_top">+requestZappId</a></tt></dt>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/Zapptitude/requestZid" target="_top">+requestZid</a></tt></dt>
 <dd><p>Opens up a dialog on top of the current view, requesting
 the user for a Zapptitude id.
 </dd>
-<dt><tt><a href="index.html#//apple_ref/occ/clm/Zapptitude/setZappId:" target="_top">+setZappId:</a></tt></dt>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/Zapptitude/setZid:" target="_top">+setZid:</a></tt></dt>
 <dd><p>Sets the Zapptitude id.
 </dd>
-<dt><tt><a href="index.html#//apple_ref/occ/clm/Zapptitude/userProvidedZappId" target="_top">+userProvidedZappId</a></tt></dt>
-<dd><p>Gets the Zapptitude id, or nil if the user is anonymous.
+<dt><tt><a href="index.html#//apple_ref/occ/clm/Zapptitude/userProvidedZid" target="_top">+userProvidedZid</a></tt></dt>
+<dd><p>Returns the Zapptitude id, or nil if the user is anonymous.
 </dd>
 </dl>
 <hr class="betweenAPIEntries"><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/Zapptitude/logBeginTask:in:;   name=Zapptitude::logBeginTask:in: -->
@@ -583,17 +583,17 @@ considered).
 and same context, the interval between the two calls is registered as the
 time to solve the task.
 <!-- headerDoc=discussion;uid=//apple_ref/occ/clm/Zapptitude/logSolveMCTask:in:about:expected:actual:among:;name=end --><!-- end discussion -->
-<hr class="betweenAPIEntries"><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/Zapptitude/requestZappId;   name=Zapptitude::requestZappId -->
-<a name="//apple_ref/occ/clm/Zapptitude/requestZappId"></a>
-<h3><a name="requestZappId">requestZappId</a></h3>
-<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/requestZappId;name=start --><!-- begin abstract --><p>Opens up a dialog on top of the current view, requesting
+<hr class="betweenAPIEntries"><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/Zapptitude/requestZid;   name=Zapptitude::requestZid -->
+<a name="//apple_ref/occ/clm/Zapptitude/requestZid"></a>
+<h3><a name="requestZid">requestZid</a></h3>
+<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/requestZid;name=start --><!-- begin abstract --><p>Opens up a dialog on top of the current view, requesting
 the user for a Zapptitude id.
-<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/requestZappId;name=end --></p>
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/requestZid;name=end --></p>
 <div class='declaration_indent'>
-<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/requestZappId;name=start -->+(<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/requestZappId //apple_ref/occ/data/Zapptitude/requestZappId //apple_ref/occ/data/requestZappId //apple_ref/occ/clconst/Zapptitude/requestZappId " machineGenerated="true" --><span class="var">requestZappId</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/requestZappId;name=end --></pre>
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/requestZid;name=start -->+(<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/requestZid //apple_ref/occ/data/Zapptitude/requestZid //apple_ref/occ/data/requestZid //apple_ref/occ/clconst/Zapptitude/requestZid " machineGenerated="true" --><span class="var">requestZid</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/requestZid;name=end --></pre>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/clm/Zapptitude/requestZappId;name=start --><p>If there is no known current user provided Zapptitude id, the
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/clm/Zapptitude/requestZid;name=start --><p>If there is no known current user provided Zapptitude id, the
 user can either provide an id, or ignore the request and stay anonymous.
 If a user provided Zapptitude id already exists, the user is welcomed back
 and can either keep the same id (confirm his/her identity), change the id
@@ -605,40 +605,40 @@ purpose of Zapptitude as well as a statement about data privacy.
 <p>If the method is not called before a call to a logging method, the
 Zapptitude id used in the log is the last used Zapptitude id on the device,
 or anonymous if no known Zapptitude id is found.
-<!-- headerDoc=discussion;uid=//apple_ref/occ/clm/Zapptitude/requestZappId;name=end --><!-- end discussion -->
-<hr class="betweenAPIEntries"><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/Zapptitude/setZappId:;   name=Zapptitude::setZappId: -->
-<a name="//apple_ref/occ/clm/Zapptitude/setZappId:"></a>
-<h3><a name="setZappId:">setZappId:</a></h3>
-<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/setZappId:;name=start --><!-- begin abstract --><p>Sets the Zapptitude id.
-<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/setZappId:;name=end --></p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/clm/Zapptitude/requestZid;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/Zapptitude/setZid:;   name=Zapptitude::setZid: -->
+<a name="//apple_ref/occ/clm/Zapptitude/setZid:"></a>
+<h3><a name="setZid:">setZid:</a></h3>
+<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/setZid:;name=start --><!-- begin abstract --><p>Sets the Zapptitude id.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/setZid:;name=end --></p>
 <div class='declaration_indent'>
-<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/setZappId:;name=start -->+(<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/Zapptitude/setZappId //apple_ref/occ/clm/Zapptitude/setZappId //apple_ref/occ/intfcm/Zapptitude/setZappId //apple_ref/occ/intfm/Zapptitude/setZappId //apple_ref/occ/func/setZappId //apple_ref/occ/ftmplt/Zapptitude/setZappId //apple_ref/occ/defn/setZappId //apple_ref/occ/macro/setZappId //apple_ref/doc/anysymbol/setZappId" machineGenerated="true" --><span class="function">setZappId</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/zid //apple_ref/occ/data/Zapptitude/zid //apple_ref/occ/data/zid //apple_ref/occ/clconst/Zapptitude/zid " machineGenerated="true" --><span class="var">zid</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/setZappId:;name=end --></pre>
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/setZid:;name=start -->+(<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/Zapptitude/setZid //apple_ref/occ/clm/Zapptitude/setZid //apple_ref/occ/intfcm/Zapptitude/setZid //apple_ref/occ/intfm/Zapptitude/setZid //apple_ref/occ/func/setZid //apple_ref/occ/ftmplt/Zapptitude/setZid //apple_ref/occ/defn/setZid //apple_ref/occ/macro/setZid //apple_ref/doc/anysymbol/setZid" machineGenerated="true" --><span class="function">setZid</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/zid //apple_ref/occ/data/Zapptitude/zid //apple_ref/occ/data/zid //apple_ref/occ/clconst/Zapptitude/zid " machineGenerated="true" --><span class="var">zid</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/setZid:;name=end --></pre>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
 <div class='param_indent'>
 <dl>
-<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/Zapptitude/setZappId:/zid;   name=setZappId:::zid -->
-<a name="//apple_ref/doc/methodparam/Zapptitude/setZappId:/zid"></a>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/Zapptitude/setZid:/zid;   name=setZid:::zid -->
+<a name="//apple_ref/doc/methodparam/Zapptitude/setZid:/zid"></a>
 <code>zid</code></dt><dd><p>NSString holding the value the Zapptitude id will be set to.</dd>
 </dl>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
-<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/clm/Zapptitude/setZappId:;name=start --><p>It can be used instead of the requestZappId method to set the
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/clm/Zapptitude/setZid:;name=start --><p>It can be used instead of the requestZid method to set the
 Zapptitude id, whenever this id is determined in another way.
 </p>
 <p>An anonymous Zapptitude id is effectively a random id used to keep track
-of the activity of an anonymous user. Calling setZappId with a nil or empty
+of the activity of an anonymous user. Calling setZid with a nil or empty
 zid is equivalent to setting the Zapptitude id to anonymous. If the
 Zapptitude id is already anonymous, it is kept unchanged by a call to
-setZappId with nil of and empty zid.
-<!-- headerDoc=discussion;uid=//apple_ref/occ/clm/Zapptitude/setZappId:;name=end --><!-- end discussion -->
-<hr class="betweenAPIEntries"><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/Zapptitude/userProvidedZappId;   name=Zapptitude::userProvidedZappId -->
-<a name="//apple_ref/occ/clm/Zapptitude/userProvidedZappId"></a>
-<h3><a name="userProvidedZappId">userProvidedZappId</a></h3>
-<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/userProvidedZappId;name=start --><!-- begin abstract --><p>Gets the Zapptitude id, or nil if the user is anonymous.
-<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/userProvidedZappId;name=end --></p>
+setZid with nil of and empty zid.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/clm/Zapptitude/setZid:;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/Zapptitude/userProvidedZid;   name=Zapptitude::userProvidedZid -->
+<a name="//apple_ref/occ/clm/Zapptitude/userProvidedZid"></a>
+<h3><a name="userProvidedZid">userProvidedZid</a></h3>
+<hr class="afterName"><p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/userProvidedZid;name=start --><!-- begin abstract --><p>Returns the Zapptitude id, or nil if the user is anonymous.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/Zapptitude/userProvidedZid;name=end --></p>
 <div class='declaration_indent'>
-<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/userProvidedZappId;name=start -->+(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/userProvidedZappId //apple_ref/occ/data/Zapptitude/userProvidedZappId //apple_ref/occ/data/userProvidedZappId //apple_ref/occ/clconst/Zapptitude/userProvidedZappId " machineGenerated="true" --><span class="var">userProvidedZappId</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/userProvidedZappId;name=end --></pre>
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/userProvidedZid;name=start -->+(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/userProvidedZid //apple_ref/occ/data/Zapptitude/userProvidedZid //apple_ref/occ/data/userProvidedZid //apple_ref/occ/clconst/Zapptitude/userProvidedZid " machineGenerated="true" --><span class="var">userProvidedZid</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/Zapptitude/userProvidedZid;name=end --></pre>
 </div>
 <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><p>An NSString with the user provided Zapptitude id or nil if the user
 is anonymous.
