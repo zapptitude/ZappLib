@@ -1,13 +1,14 @@
 # ZappLib
-Zapptitude's library for Objective-C.
+Zapptitude's framework for Objective-C.
 
 # Install
 - Downloading the ZappLib project from Github at https://github.com/zapptitude/ZappLib.
-- Add to your Objective-C project
-  - the header file Zapptitude.h
-  - the library file libZapp.a
-  - the bundle file ZappImages.bundle
-  - the framework file LoggerSDK.framework
+- Add to your Objective-C project under "Build Phases" -> "Link Binary with Libraries"
+  - the framework SystemConfiguration.framework
+  - the framework LoggerSDK.framework
+  - the framework ZappSDK.framework
 
 # Usage
-- Follow the documentation in Doc/.
+- In any file using Zapptitude, add the import
+  #import <ZappSDK/ZappSDK.h>
+- Follow the documentation in Doc/. for each API

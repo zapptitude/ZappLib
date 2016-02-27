@@ -1,0 +1,6 @@
+framework module ZappSDK {
+  umbrella header "ZappSDK.h"
+
+  export *
+  module * { export * }
+}
