@@ -45,6 +45,35 @@
   If the method is not called before a call to a logging method, the
   Zapptitude id used in the log is the last used Zapptitude id on the device,
   or anonymous if no known Zapptitude id is found.
+
+  If zid is unknown and whenKnownOnly is YES, there is no dialog.
+  If zid is known, whenKnownOnly is YES, and reset is NO, the dialog is
+  'Welcome back'.
+  If zid is known, whenKnownOnly and reset are YES, the zid is reset first and
+  the dialog is 'Enter your zid'.
+  If zid is known, whenKnownOnly is NO, and reset is YES, the zid if known is
+  reset first and the dialog is always 'Enter your zid'.
+  If whenKnownOnly and reset are NO, the dialog is either 'Welcome back' when
+  the zid is known, or 'Enter your zid' otherwise.
+
+  @param timeOut BOOL indicates whether the dialog closes itself after 2 seconds
+  without user interaction with the dialog.
+  @param whenKnownOnly BOOL. If NO, the dialog is opened in all cases.
+  Otherwise, the dialog is opened only when the zid is known (prior to reset).
+  @param reset BOOL. If YES a previously known zid is ignored.
+  @param kidFriendly BOOL controls whether links such as www.zapptitude.com are
+  active (kidFriendly is NO) or not (kidFriendly is YES).
+ */
++ (void)requestZidTimeOut:(BOOL)timeOut
+            whenKnownOnly:(BOOL)whenKnownOnly
+                    reset:(BOOL)reset
+              kidFriendly:(BOOL)kidFriendly;
+
+/*!
+ @brief Opens up a dialog on top of the current view, requesting
+ the user for a Zapptitude id.
+ @discussion This is equivalent to
+ [Zapptitude requestZidTimeout:NO whenKnownOnly:NO reset:NO kidFriendly:NO];
  */
 + (void)requestZid;
 

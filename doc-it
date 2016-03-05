@@ -1,0 +1,1 @@
+headerdoc2html -o "Doc" ZappSDK.framework/Headers/Zapptitude.h
