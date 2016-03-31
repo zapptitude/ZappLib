@@ -1,0 +1,6 @@
+framework module LoggerSDK {
+  umbrella header "LoggerSDK.h"
+
+  export *
+  module * { export * }
+}
