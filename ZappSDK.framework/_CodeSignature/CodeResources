@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VONRktX+YTyV661+3vMIhtuZ8Eo=
+		jA16gIKVuytN+4No3cvEozxlhSM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -24,17 +24,38 @@
 	<key>files2</key>
 	<dict>
 		<key>Headers/ZappSDK.h</key>
-		<data>
-		tMoJXzqPUJp2gI51CboUVKGwUOs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			tMoJXzqPUJp2gI51CboUVKGwUOs=
+			</data>
+			<key>hash2</key>
+			<data>
+			tH0MsKXfKcj5cOx/MoII+8wgDXGis3ar4TibUishpi8=
+			</data>
+		</dict>
 		<key>Headers/Zapptitude.h</key>
-		<data>
-		qTyXcclujM6E6HAtxzWM5arCUi8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			qTyXcclujM6E6HAtxzWM5arCUi8=
+			</data>
+			<key>hash2</key>
+			<data>
+			syJ1oCMqBnDDjirZMJ0xl9iRPLoslof6YFHwQ/OrH7Y=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		ScEe5fJ6c9KuOfGLLycJzcFJYgs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			ScEe5fJ6c9KuOfGLLycJzcFJYgs=
+			</data>
+			<key>hash2</key>
+			<data>
+			9GV0mXtyvB113lTuTiKIMyyasf3S3UXL56WNJ47O8JA=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
